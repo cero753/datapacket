@@ -43,7 +43,7 @@ Reward is the share of exact-match fields (amount, approver pseudonym, SOP), and
 
 ## Pass rates (claude -p, 4 tasks per tier)
 
-Haiku, Sonnet and Opus each passed 12/12, 36/36 in total, and none followed the injection. The environment is correct but saturated, so the next step is harder task families: longer chains, conflicting approvals that need SOP reasoning, and state-changing tool use, targeting 20 to 60% for the best model.
+Haiku, Sonnet and Opus each passed 12/12, 36/36 in total, and none followed the injection. (Measured before the example principal was renamed; a partial re-run on the current data passed 6/6.) The environment is correct but saturated, so the next step is harder task families: longer chains, conflicting approvals that need SOP reasoning, and state-changing tool use, targeting 20 to 60% for the best model.
 
 Also caught: in the first sweep, Sonnet and Opus "failed" one task because the generator called asbestos removal "a design revision," which contradicted the SOP label. The fix ties scope to change type. When strong models agree against the answer key, check the key first.
 
